@@ -185,6 +185,16 @@ suite('Unit Tests', () => {
     done();
   });
 
+  test("Translate Prof Joyner of King's College, London. to American English", function (done) {
+    let input = "Prof Joyner of King's College, London.";
+    let output = "Prof. Joyner of King's College, London.";
+    assert.equal(
+      translator.stripHtml(translator.britishToAmerican(input)),
+      output
+    );
+    done();
+  });
+
   test('Translate Tea time is usually around 4 or 4.30. to American English', function (done) {
     let input = 'Tea time is usually around 4 or 4.30.';
     let output = 'Tea time is usually around 4 or 4:30.';
